@@ -1,5 +1,5 @@
 const form = document.querySelector('form');
-const list = document.querySelector('list');
+const list = document.querySelector("#list");
 form.addEventListener('submit', function(e){
     e.preventDefault();
     const prod = form.elements.product;
@@ -11,6 +11,6 @@ form.addEventListener('submit', function(e){
 
 const addItem = (product, quantity) => {
     const newItem = document.createElement('li');
-    newItem.append(`${quantity} ${product}`);
-    list.append(newItem);
+    newItem.innerText = `${quantity} ${product}`;
+    list.appendChild(newItem);
 }
